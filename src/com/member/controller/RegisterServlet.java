@@ -92,7 +92,7 @@ public class RegisterServlet extends HttpServlet {
 			//準備JavaMail的發送
 			String to = mv.getMem_email();
 			String subject = "帳戶激活通知";
-			String messageText = "<h1>你好！請點擊此<a href=\"http://35.194.147.13/CFA101G4/MemberServlet?action=confirm&account="+mv.getMem_acc()+"\">連結</a>以激活您的帳戶<br>請注意！鏈接將於30分鐘後失效！</h1>";
+			String messageText = "<h1>你好！請點擊此<a href=\"http://35.194.147.13/CFA101G4/MemberServlet?action=confirm&account="+mv.getMem_acc()+"\">連結</a>以啟用您的帳戶<br>請注意！連結將於30分鐘後失效！</h1>";
 			sendMail sm = new sendMail(to, subject, messageText);
 			Thread t1 = new Thread(sm);
 			t1.start();
